@@ -10,6 +10,7 @@ namespace AccountingApp.Models
     {
         public int id {  get; set; }
         public double value { get; set; }
-        public string path { get; set; }
+        public string? path { get; set; }
+        public DateOnly date { get; set; }
     }
 }
