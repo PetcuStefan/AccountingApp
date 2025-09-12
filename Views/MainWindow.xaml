@@ -36,14 +36,14 @@
 
             <!-- Costs Table (left column) -->
             <StackPanel Grid.Column="0">
-                <TextBlock Text="Costuri"
-                           FontSize="18"
-                           FontWeight="SemiBold"
-                           Foreground="#b71c1c"
-                           Margin="0,0,0,10"/>
+                <TextBlock Text="Costs"
+               FontSize="18"
+               FontWeight="SemiBold"
+               Foreground="#b71c1c"
+               Margin="0,0,0,10"/>
                 <DataGrid ItemsSource="{Binding Costs}"
-                          Style="{StaticResource CostDataGridStyle}"
-                          AutoGenerateColumns="False" Margin="0,0,0,0">
+              Style="{StaticResource CostDataGridStyle}"
+              AutoGenerateColumns="False" Height="250">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID"   Binding="{Binding id}"    Width="Auto"/>
                         <DataGridTextColumn Header="Value" Binding="{Binding value}" Width="*"/>
@@ -51,18 +51,27 @@
                         <DataGridTextColumn Header="Date" Binding="{Binding date}"  Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
+
+                <!-- Add Cost Button -->
+                <Button Content="Add Cost"
+            Margin="0,10,0,0"
+            Background="#e57373"
+            Foreground="White"
+            Padding="6"
+            Command="{Binding AddCostCommand}"/>
             </StackPanel>
+
 
             <!-- Revenues Table (right column) -->
             <StackPanel Grid.Column="2">
-                <TextBlock Text="Încasări"
-                           FontSize="18"
-                           FontWeight="SemiBold"
-                           Foreground="#1b5e20"
-                           Margin="0,0,0,10"/>
+                <TextBlock Text="Revenues"
+               FontSize="18"
+               FontWeight="SemiBold"
+               Foreground="#1b5e20"
+               Margin="0,0,0,10"/>
                 <DataGrid ItemsSource="{Binding Revenues}"
-                          Style="{StaticResource RevenueDataGridStyle}"
-                          AutoGenerateColumns="False" Margin="0,0,0,0">
+              Style="{StaticResource RevenueDataGridStyle}"
+              AutoGenerateColumns="False" Height="250">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID"   Binding="{Binding id}"    Width="Auto"/>
                         <DataGridTextColumn Header="Value" Binding="{Binding value}" Width="*"/>
@@ -70,6 +79,14 @@
                         <DataGridTextColumn Header="Date" Binding="{Binding date}"  Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
+
+                <!-- Add Revenue Button -->
+                <Button Content="Add Revenue"
+            Margin="0,10,0,0"
+            Background="#81c784"
+            Foreground="White"
+            Padding="6"
+            Command="{Binding AddRevenueCommand}"/>
             </StackPanel>
         </Grid>
     </Grid>
