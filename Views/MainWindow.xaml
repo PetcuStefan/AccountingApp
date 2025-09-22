@@ -7,10 +7,6 @@
         Background="#fafafa"
         WindowStartupLocation="CenterScreen">
 
-    <Window.DataContext>
-        <vm:MainViewModel />
-    </Window.DataContext>
-
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

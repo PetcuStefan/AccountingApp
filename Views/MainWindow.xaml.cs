@@ -7,6 +7,7 @@ namespace AccountingApp.Views
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new AccountingApp.ViewModels.MainViewModel();
         }
     }
 }
