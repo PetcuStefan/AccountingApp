@@ -19,12 +19,6 @@
             <TextBox x:Name="ValueBox" Width="200"/>
         </StackPanel>
 
-        <!-- Path -->
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0 0 0 10">
-            <TextBlock Text="Path:" Width="100" VerticalAlignment="Center"/>
-            <TextBox x:Name="PathBox" Width="200"/>
-        </StackPanel>
-
         <!-- Date -->
         <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0 0 0 10">
             <TextBlock Text="Date:" Width="100" VerticalAlignment="Center"/>
@@ -32,9 +26,8 @@
         </StackPanel>
 
         <!-- Buttons -->
-        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Right">
-            <Button Content="Save" Width="80" Margin="0 0 10 0" Click="Save_Click"/>
-            <Button Content="Cancel" Width="80" Click="Cancel_Click"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+            <Button Content="Save" Height="20" Width="80" Margin="0 0 10 0" Click="Save_Click" RenderTransformOrigin="-1.295,1.564"/>
         </StackPanel>
     </Grid>
 </Window>
