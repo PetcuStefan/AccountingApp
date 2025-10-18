@@ -34,6 +34,13 @@ namespace AccountingApp.ViewModels
             Revenues = new ObservableCollection<Report>(reports.Where(r => r.value > 0));
         }
 
+        public void RefreshReports()
+        {
+            LoadReports();
+            OnPropertyChanged(nameof(Costs));
+            OnPropertyChanged(nameof(Revenues));
+        }
+
         private void AddReport(bool isRevenue)
         {
             var window = new Views.AddReportWindow(isRevenue)
